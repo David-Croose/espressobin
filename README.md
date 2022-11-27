@@ -213,6 +213,40 @@ https://github.com/David-Croose/various_arm_fs
 
 
 
+## GPIO
+
+![GPIO](GPIO.png)
+
+MPP1_x: gpionb
+
+MPP2_x: gpiosb
+
+e.g:
+
+```
+leds {
+	compatible = "gpio-leds";
+	led-power1 {
+		/* MPP1_11 */
+		label = "udpu:green:power";
+		gpios = <&gpionb 11 GPIO_ACTIVE_LOW>;
+	};
+	led-power2 {
+		/* MPP1_12 */
+		label = "udpu:red:power";
+		gpios = <&gpionb 12 GPIO_ACTIVE_LOW>;
+	};
+};
+```
+
+
+
+## OpenWrt
+
+unzip the openwrt-mvebu-cortexa53-globalscale-espressobin-ext4-sdcard.img.gz to get a img file, burn it into TFCard.
+
+
+
 ## REFER
 
 https://espressobin.net
